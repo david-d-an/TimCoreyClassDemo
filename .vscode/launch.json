@@ -1,0 +1,41 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "DelegatesConsole",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildDelegates",
+            "program": "${workspaceFolder}/Delegates/bin/Debug/net5.0/Delegates.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Delegates",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "DependencyInjectionConsole",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildDependencyInjection",
+            "program": "${workspaceFolder}/DependencyInjection/bin/Debug/net5.0/DependencyInjection.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/DependencyInjection",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "GenericsConsole",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildGenerics",
+            "program": "${workspaceFolder}/Generics/bin/Debug/net5.0/Generics.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Generics",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        }
+    ]
+}
