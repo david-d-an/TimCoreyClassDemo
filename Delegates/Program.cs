@@ -75,6 +75,10 @@ namespace DelegatesDemo
             Console.WriteLine($"All tasks done after wating {v} milliseconds.");
         }
 
+        private static int GetVal() {
+            return new Random().Next();
+        }
+
         public static async Task<int> LongTaskAsync() {
             return await Task.Run(() => LongTask());
         }
