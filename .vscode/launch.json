@@ -5,6 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "AsyncConsole",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildAsync",
+            "program": "${workspaceFolder}/Async/bin/Debug/net5.0/Async.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Async",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": "DelegatesConsole",
             "type": "coreclr",
             "request": "launch",
