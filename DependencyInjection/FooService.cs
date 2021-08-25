@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Logging;
 
-namespace DependencyInjection {
+namespace DependencyInjectionDemo {
     public interface IFooService {
         void DoFooThing(int number);
     }

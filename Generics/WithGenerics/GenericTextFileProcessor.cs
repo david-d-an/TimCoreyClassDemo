@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleUI
+namespace GenericsDemo.WithGenerics
 {
     public static class GenericTextFileProcessor
     {

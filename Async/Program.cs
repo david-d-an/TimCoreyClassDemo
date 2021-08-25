@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace AsyncDemo
 {
@@ -29,9 +33,6 @@ namespace AsyncDemo
 
         static async Task Main(string[] args)
         {
-            Func<int, int, double> foo = (a, b) => a + b + GetVal();
-            Console.WriteLine($"Hello World: {foo(2, 3)}");
-
             Console.WriteLine("Long task started.\n");
 
             IEnumerable<Task<int>> tasks;

@@ -1,7 +1,7 @@
 using System.Linq;
 using Microsoft.Extensions.Logging;
 
-namespace DependencyInjection {
+namespace DependencyInjectionDemo {
     public interface IBarService {
         void DoBarThing();
     }
