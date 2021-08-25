@@ -29,13 +29,10 @@ namespace DelegatesDemo
         public static Button CovariantButton()
         { return new Button(); }
 
-
-
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             Func<int, int, double> foo = (a, b) => a + b + GetVal();
             Console.WriteLine($"Hello World: {foo(2, 3)}");
-
 
             // Contravariant
             // DContravariant<Control> dContraControl = ContravariantControl;
