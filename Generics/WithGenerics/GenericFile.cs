@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenericsDemo.WithGenerics
 {
-    public static class GenericTextFileProcessor
+    public static class GenericFile
     {
         public static List<T> LoadFromTextFile<T>(string filePath) where T : class, new()
         {

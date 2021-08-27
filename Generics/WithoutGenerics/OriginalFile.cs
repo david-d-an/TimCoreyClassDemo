@@ -7,7 +7,7 @@ using GenericsDemo.Models;
 
 namespace GenericsDemo.WithoutGenerics
 {
-    public static class OriginalTextFileProcessor
+    public static class OriginalFile
     {
         public static List<Person> LoadPeople(string filePath)
         {
