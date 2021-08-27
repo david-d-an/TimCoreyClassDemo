@@ -17,7 +17,7 @@ namespace DelegatesDemo {
                 msg => Console.WriteLine(msg)
             );
 
-            Console.WriteLine($"Grand Total: {grandTotal}");
+            Console.WriteLine($"Grand Total: {grandTotal:C2}");
         }
 
         private static void AlertSubTotal(decimal subTotal) {
