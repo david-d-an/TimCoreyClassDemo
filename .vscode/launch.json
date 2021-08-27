@@ -34,7 +34,7 @@
             "program": "${workspaceFolder}/DependencyInjection/bin/Debug/net5.0/DependencyInjection.dll",
             "args": [],
             "cwd": "${workspaceFolder}/DependencyInjection",
-            "console": "internalConsole",
+            "console": "integratedTerminal",
             "stopAtEntry": false
         },
         {
@@ -45,7 +45,7 @@
             "program": "${workspaceFolder}/Generics/bin/Debug/net5.0/Generics.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Generics",
-            "console": "internalConsole",
+            "console": "integratedTerminal",
             "stopAtEntry": false
         }
     ]
