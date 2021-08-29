@@ -2,7 +2,7 @@ using System;
 
 namespace EventsDemo {
     public interface ISignalProcessor {
-        // event EventHandler SignalHandler;
+        event EventHandler SignalHandler;
     }
 
 
