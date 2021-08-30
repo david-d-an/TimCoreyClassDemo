@@ -1,19 +1,17 @@
 using System;
+using System.Linq;
 
 namespace EventsDemo {
     public interface ISignalProcessor {
         event EventHandler SignalHandler;
     }
 
-
     public class SignalProcessor : ISignalProcessor {
         public event EventHandler SignalHandler;
         // public EventHandler SignalHandler;
 
         public void SendTestSignal(int repeat = 1) {
-            for(int i = 0; i < repeat; i++) {
-                OnSignal();
-            }
+            Enumerable.Range(0, repeat).ToList().ForEach(i => OnSignal());
         }
 
         protected virtual void OnSignal() {
