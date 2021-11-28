@@ -58,6 +58,17 @@
             "cwd": "${workspaceFolder}/AzureSpeech",
             "console": "internalConsole",
             "stopAtEntry": false
+        },
+        {
+            "name": "ConsoleConfig",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildConsoleConfig",
+            "program": "${workspaceFolder}/ConsoleConfig/bin/Debug/net5.0/ConsoleConfig.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/ConsoleConfig",
+            "console": "internalConsole",
+            "stopAtEntry": false
         }
     ]
 }

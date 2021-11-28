@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Middleware", "Middleware\Mi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureSpeech", "AzureSpeech\AzureSpeech.csproj", "{534CB528-721E-499A-94FA-1F7B6F7C41C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleConfig", "ConsoleConfig\ConsoleConfig.csproj", "{62D324FC-5FFB-4FEA-BE4A-49DB237519C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -128,5 +130,17 @@ Global
 		{534CB528-721E-499A-94FA-1F7B6F7C41C0}.Release|x64.Build.0 = Release|Any CPU
 		{534CB528-721E-499A-94FA-1F7B6F7C41C0}.Release|x86.ActiveCfg = Release|Any CPU
 		{534CB528-721E-499A-94FA-1F7B6F7C41C0}.Release|x86.Build.0 = Release|Any CPU
+		{62D324FC-5FFB-4FEA-BE4A-49DB237519C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62D324FC-5FFB-4FEA-BE4A-49DB237519C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62D324FC-5FFB-4FEA-BE4A-49DB237519C0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{62D324FC-5FFB-4FEA-BE4A-49DB237519C0}.Debug|x64.Build.0 = Debug|Any CPU
+		{62D324FC-5FFB-4FEA-BE4A-49DB237519C0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{62D324FC-5FFB-4FEA-BE4A-49DB237519C0}.Debug|x86.Build.0 = Debug|Any CPU
+		{62D324FC-5FFB-4FEA-BE4A-49DB237519C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62D324FC-5FFB-4FEA-BE4A-49DB237519C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62D324FC-5FFB-4FEA-BE4A-49DB237519C0}.Release|x64.ActiveCfg = Release|Any CPU
+		{62D324FC-5FFB-4FEA-BE4A-49DB237519C0}.Release|x64.Build.0 = Release|Any CPU
+		{62D324FC-5FFB-4FEA-BE4A-49DB237519C0}.Release|x86.ActiveCfg = Release|Any CPU
+		{62D324FC-5FFB-4FEA-BE4A-49DB237519C0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
