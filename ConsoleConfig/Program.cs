@@ -4,7 +4,6 @@ using Microsoft.Extensions.Configuration;
 namespace ConsoleConfig {
     class Program {
         static void Main(string[] args) {
-
             IConfiguration config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: false)
