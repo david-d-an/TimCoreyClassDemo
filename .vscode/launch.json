@@ -47,6 +47,17 @@
             "cwd": "${workspaceFolder}/Generics",
             "console": "integratedTerminal",
             "stopAtEntry": false
+        },
+        {
+            "name": "AzureSpeechConsole",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildAzureSpeech",
+            "program": "${workspaceFolder}/AzureSpeech/bin/Debug/net5.0/AzureSpeech.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/AzureSpeech",
+            "console": "internalConsole",
+            "stopAtEntry": false
         }
     ]
 }

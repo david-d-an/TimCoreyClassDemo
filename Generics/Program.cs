@@ -8,10 +8,8 @@ using GenericsDemo.Models;
 using GenericsDemo.WithGenerics;
 using GenericsDemo.WithoutGenerics;
 
-namespace GenericsDemo
-{
-    class Program
-    {
+namespace GenericsDemo {
+    class Program {
         private static string peopleFile = @"./temp/people.csv";
         private static string logFile = @"./temp/logs.csv";
 
