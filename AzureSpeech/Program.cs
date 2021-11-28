@@ -4,15 +4,48 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Microsoft.Extensions.Configuration;
+using System.IO;
 
 namespace GenericsDemo {
     class Program {
-        private static readonly string subscriptionKey = "3532c019287f4cb08503d22e8c264671";
-        private static readonly string endpoint = "https://api.cognitive.microsofttranslator.com/";
+        private static IConfiguration _Config;
+        public static IConfiguration Config {
+            get {
+                if (_Config != null)
+                    return _Config;
 
-        // Add your location, also known as region. The default is global.
-        // This is required if using a Cognitive Services resource.
-        private static readonly string location = "eastus2";
+                return Config = 
+                    new ConfigurationBuilder()
+                    .SetBasePath(Directory.GetCurrentDirectory())
+                    .AddJsonFile("appsettings.json", optional: false)
+                    .AddEnvironmentVariables()
+                    .Build();
+            }
+            set {
+                if (_Config != null)
+                    return;
+                _Config = value;
+            }
+        }
+
+        public static string SubscriptionKey { 
+            get {
+                return Config.GetSection("CognitiveService:SubscriptionKey").Value;
+            } 
+        }
+        public static string Region { 
+            get {
+                return Config.GetSection("CognitiveService:Region").Value;
+            } 
+        }
+        public static string EndPoint { 
+            get {
+                return Config.GetSection("CognitiveService:EndPoint").Value;
+            } 
+        }
+
+
         private const int StandardDelay = 3000;
         private static readonly int NumberOfChatRooms = 30;
 
@@ -28,7 +61,7 @@ namespace GenericsDemo {
                 "My very photogenic mother died in a freak accident (picnic, lightning) when I was three, and, save for a pocket of warmth in the darkest past, nothing of her subsists within the hollows and dells of memory, over which, if you can still stand my style",
             };
 
-            string route = "/translate?api-version=3.0&from=en&to=es&to=de&to=ko";
+            string route = "translate?api-version=3.0&from=en&to=es&to=de&to=ko";
             int maxResponse = 0;
 
             using (var client = new HttpClient()) {
@@ -39,11 +72,11 @@ namespace GenericsDemo {
 
                     var request = new HttpRequestMessage {
                         Method = HttpMethod.Post,
-                        RequestUri = new Uri(endpoint + route),
+                        RequestUri = new Uri(EndPoint + route),
                         Content = new StringContent(requestBody, Encoding.UTF8, "application/json")
                     };
-                    request.Headers.Add("Ocp-Apim-Subscription-Key", subscriptionKey);
-                    request.Headers.Add("Ocp-Apim-Subscription-Region", location);
+                    request.Headers.Add("Ocp-Apim-Subscription-Key", SubscriptionKey);
+                    request.Headers.Add("Ocp-Apim-Subscription-Region", Region);
 
                     DateTime startTime = DateTime.Now;
                     HttpResponseMessage response = await client.SendAsync(request).ConfigureAwait(false);
