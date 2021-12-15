@@ -50,6 +50,18 @@
             "problemMatcher": "$msCompile"
         },
         {
+            "label": "buildSmartEnum",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/SmartEnum/SmartEnum.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
             "label": "buildAzureSpeech",
             "command": "dotnet",
             "type": "process",
@@ -68,6 +80,18 @@
             "args": [
                 "build",
                 "${workspaceFolder}/ConsoleConfig/ConsoleConfig.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "buildHttpConsole",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/HttpConsole/HttpConsole.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],

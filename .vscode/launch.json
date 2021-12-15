@@ -42,9 +42,20 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "buildGenerics",
-            "program": "${workspaceFolder}/Generics/bin/Debug/net5.0/Generics.dll",
+            "program": "${workspaceFolder}/Generics/bin/Debug/net6.0/Generics.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Generics",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "SmartEnum",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildSmartEnum",
+            "program": "${workspaceFolder}/SmartEnum/bin/Debug/net6.0/SmartEnum.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/SmartEnum",
             "console": "integratedTerminal",
             "stopAtEntry": false
         },
@@ -67,6 +78,17 @@
             "program": "${workspaceFolder}/ConsoleConfig/bin/Debug/net5.0/ConsoleConfig.dll",
             "args": [],
             "cwd": "${workspaceFolder}/ConsoleConfig",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "HttpConsole",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildHttpConsole",
+            "program": "${workspaceFolder}/HttpConsole/bin/Debug/net6.0/HttpConsole.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/HttpConsole",
             "console": "internalConsole",
             "stopAtEntry": false
         }
