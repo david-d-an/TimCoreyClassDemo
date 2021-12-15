@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "AsyncConsole",
+            "name": "Async Console",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "buildAsync",
@@ -16,7 +16,7 @@
             "stopAtEntry": false
         },
         {
-            "name": "DelegatesConsole",
+            "name": "Delegates",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "buildDelegates",
@@ -27,7 +27,7 @@
             "stopAtEntry": false
         },
         {
-            "name": "DependencyInjectionConsole",
+            "name": "DI Console",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "buildDependencyInjection",
@@ -38,7 +38,7 @@
             "stopAtEntry": false
         },
         {
-            "name": "GenericsConsole",
+            "name": "Generics",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "buildGenerics",
@@ -60,7 +60,7 @@
             "stopAtEntry": false
         },
         {
-            "name": "AzureSpeechConsole",
+            "name": "Azure Speech",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "buildAzureSpeech",
