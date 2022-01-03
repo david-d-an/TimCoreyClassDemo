@@ -49,6 +49,17 @@
             "stopAtEntry": false
         },
         {
+            "name": "Functional Program",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildFunctionalProgram",
+            "program": "${workspaceFolder}/FunctionalProgram/bin/Debug/net6.0/FunctionalProgram.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/FunctionalProgram",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
             "name": "SmartEnum",
             "type": "coreclr",
             "request": "launch",
