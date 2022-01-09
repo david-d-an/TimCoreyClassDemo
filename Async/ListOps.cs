@@ -36,7 +36,8 @@ namespace AsyncDemo {
                 .Select(s => s.MakeUpper());
 
             IEnumerable<Task<string>> tasks2 = list
-                .Where(async s => await s.StringEqual("ABC"))
+                // Where can't take Async predicate
+                // .Where(async s => await s.StringEqual("ABC"))
                 .Select(async s => {
                     string ups = await s.MakeUpper();
                     return await ups.MakeTrim();
