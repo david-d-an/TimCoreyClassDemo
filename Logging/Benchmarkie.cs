@@ -57,4 +57,9 @@ public class Benchmarkie
     public void LogAdapter_WithParams() {
         _loggerAdapter.LogInformation(LogMessageWithParameters, 69, 420);
     }
+
+    [Benchmark]
+    public void LogAdapter_WithParamsInterpolation() {
+        _loggerAdapter.LogInformation($"This is a log messagewith parameters. Parameters: {69}, {420}");
+    }
 }
