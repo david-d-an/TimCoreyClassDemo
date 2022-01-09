@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartEnum", "SmartEnum\Smar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionalProgram", "FunctionalProgram\FunctionalProgram.csproj", "{566D4523-7A06-4877-ABFE-35C8B5DE3815}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "Logging\Logging.csproj", "{F74DEFFA-8875-4F3F-AD88-1FCE8DA2AE54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -184,5 +186,17 @@ Global
 		{566D4523-7A06-4877-ABFE-35C8B5DE3815}.Release|x64.Build.0 = Release|Any CPU
 		{566D4523-7A06-4877-ABFE-35C8B5DE3815}.Release|x86.ActiveCfg = Release|Any CPU
 		{566D4523-7A06-4877-ABFE-35C8B5DE3815}.Release|x86.Build.0 = Release|Any CPU
+		{F74DEFFA-8875-4F3F-AD88-1FCE8DA2AE54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F74DEFFA-8875-4F3F-AD88-1FCE8DA2AE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F74DEFFA-8875-4F3F-AD88-1FCE8DA2AE54}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F74DEFFA-8875-4F3F-AD88-1FCE8DA2AE54}.Debug|x64.Build.0 = Debug|Any CPU
+		{F74DEFFA-8875-4F3F-AD88-1FCE8DA2AE54}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F74DEFFA-8875-4F3F-AD88-1FCE8DA2AE54}.Debug|x86.Build.0 = Debug|Any CPU
+		{F74DEFFA-8875-4F3F-AD88-1FCE8DA2AE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F74DEFFA-8875-4F3F-AD88-1FCE8DA2AE54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F74DEFFA-8875-4F3F-AD88-1FCE8DA2AE54}.Release|x64.ActiveCfg = Release|Any CPU
+		{F74DEFFA-8875-4F3F-AD88-1FCE8DA2AE54}.Release|x64.Build.0 = Release|Any CPU
+		{F74DEFFA-8875-4F3F-AD88-1FCE8DA2AE54}.Release|x86.ActiveCfg = Release|Any CPU
+		{F74DEFFA-8875-4F3F-AD88-1FCE8DA2AE54}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
