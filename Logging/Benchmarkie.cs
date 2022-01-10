@@ -1,3 +1,5 @@
+using System;
+using System.Text;
 using BenchmarkDotNet.Attributes;
 using Microsoft.Extensions.Logging;
 
@@ -9,6 +11,10 @@ public class Benchmarkie
     private const string LogMessageWithParameters =
         "This is a log messagewith parameters. Parameters: {0}, {1}";
     private const string LogMessage = "This is a log message.";
+
+    int a = 69;
+    int b = 420;
+
 
     private readonly ILoggerFactory _loggerFactory = LoggerFactory.Create(builder => {
         builder
@@ -26,40 +32,37 @@ public class Benchmarkie
 
     [Benchmark]
     public void Log_WithoutIf() {
-        _logger.LogInformation(LogMessage);
+        _logger.LogInformation("This is a log messagewith parameters. Parameters: {0}, {1}", a, b);
+    }
+
+    [Benchmark]
+    public void Log_WithoutIf_Interpolation() {
+        _logger.LogInformation($"This is a log messagewith parameters. Parameters: {a}, {b}");
     }
 
     [Benchmark]
     public void Log_WithIf() {
-        if (_logger.IsEnabled(LogLevel.Information)) {
-            _logger.LogInformation(LogMessage);
-        }
+        if (!_logger.IsEnabled(LogLevel.Information)) return;
+        _logger.LogInformation("This is a log messagewith parameters. Parameters: {0}, {1}", a, b);
     }
 
     [Benchmark]
-    public void Log_WithoutIfWithParams() {
-        _logger.LogInformation(LogMessageWithParameters, 69, 420);
-
-        // This is expensive
-        // _logger.LogInformation("Message: {0}", Random.Shared.Next());
-        // This is terribly expensive. Expecting far mroe GC than above
-        // _logger.LogInformation($"Message: {Random.Shared.Next()}");
+    public void Log_WithIf_Interpolation() {
+        if (!_logger.IsEnabled(LogLevel.Information)) return;
+        _logger.LogInformation($"This is a log messagewith parameters. Parameters: {a}, {b}");
     }
 
     [Benchmark]
-    public void Log_WithIfWithParams() {
-        if (_logger.IsEnabled(LogLevel.Information)) {
-            _logger.LogInformation(LogMessageWithParameters, 69, 420);
-        }
+    public void LogAdapter() {
+        // This only passess string parameters to LogInformation(). String rebuilding happens only
+        // if the logging happens to save time.
+        _loggerAdapter.LogInformation("This is a log messagewith parameters. Parameters: {0}, {1}", a, b);
     }
 
     [Benchmark]
-    public void LogAdapter_WithParams() {
-        _loggerAdapter.LogInformation(LogMessageWithParameters, 69, 420);
-    }
-
-    [Benchmark]
-    public void LogAdapter_WithParamsInterpolation() {
-        _loggerAdapter.LogInformation($"This is a log messagewith parameters. Parameters: {69}, {420}");
+    public void LogAdapter_Interpolation() {
+        // Interpolation is happening before the process reaches the If statement
+        // inside LogInformation(), whic costs a lot.
+        _loggerAdapter.LogInformation($"This is a log messagewith parameters. Parameters: {a}, {b}");
     }
 }
