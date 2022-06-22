@@ -20,9 +20,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "buildDelegates",
-            "program": "${workspaceFolder}/Delegates/bin/Debug/net5.0/Delegates.dll",
+            "program": "${workspaceFolder}/DelegatesDemo/bin/Debug/net5.0/DelegatesDemo.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Delegates",
+            "cwd": "${workspaceFolder}/DelegatesDemo",
             "console": "internalConsole",
             "stopAtEntry": false
         },
