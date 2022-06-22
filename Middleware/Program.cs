@@ -18,9 +18,12 @@ namespace Middleware
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
+                .ConfigureWebHostDefaults(webBuilder => {
                     webBuilder.UseStartup<Startup>();
+                })
+                .ConfigureAppConfiguration((ctx, builder) => {
+                    var config = builder.Build();
+                    var allowedHosts = config["AllowedHosts"];
                 });
     }
 }
