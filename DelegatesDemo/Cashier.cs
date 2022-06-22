@@ -1,9 +1,9 @@
 using System;
-using Model;
+using DelegatesDemo.Model;
 
 namespace DelegatesDemo {
     public class Cashier {
-        private ShoppingCartModel _cart;
+        private readonly ShoppingCartModel _cart;
 
         public Cashier() {
             _cart = new ShoppingCartModel();
