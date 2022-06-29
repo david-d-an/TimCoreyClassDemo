@@ -18,6 +18,9 @@ namespace AsyncDemo {
             int bytesLoaded2 = await downloading;
             Console.WriteLine($"2. {nameof(Main)}: Downloaded {bytesLoaded2} bytes.");
 
+            // ReturnAwaitTest.GetIFooAsyncNoWait doesn't work due to type incompatibility
+            IFoo foo = await ReturnAwaitTest.GetIFooAsync();
+            Console.WriteLine($"foo.id = {foo.id}     foo.timestamp = {foo.timestamp}");
         }
 
 
