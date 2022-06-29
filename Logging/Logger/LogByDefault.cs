@@ -1,5 +1,6 @@
-
 using Microsoft.Extensions.Logging;
+
+namespace Logging.Logger;
 
 public class LogByDefault {
     private const string StandardLogMsg =

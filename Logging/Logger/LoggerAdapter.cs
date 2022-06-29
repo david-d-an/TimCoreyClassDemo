@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Logging;
 
-namespace Logging.Benchmarks;
+namespace Logging.Logger;
 
 public interface ILoggerAdapter<T> {
     void LogInformation(string message);

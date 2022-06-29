@@ -1,18 +1,10 @@
 ﻿using BenchmarkDotNet.Running;
-using Logging.Benchmarks;
-using Serilog;
-using Microsoft.Extensions.Logging;
+using Logging.Benchmark;
 
-var bm = new Benchmarkie();
+BenchmarkRunner.Run<Benchmarker>();
 
-BenchmarkRunner.Run<Benchmarkie>();
-
-
-
-
-
-var log = new LoggerConfiguration()
-    .MinimumLevel.Information()
-    .WriteTo.Console()
-    .CreateLogger();
+// var log = new LoggerConfiguration()
+//     .MinimumLevel.Information()
+//     .WriteTo.Console()
+//     .CreateLogger();
 

@@ -1,5 +1,7 @@
 using Serilog;
 
+namespace Logging.Logger;
+
 public class LogBySerilog {
     public LogBySerilog() {}
 

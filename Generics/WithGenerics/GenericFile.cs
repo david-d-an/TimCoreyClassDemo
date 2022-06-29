@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace GenericsDemo.WithGenerics
 {
@@ -98,6 +98,8 @@ namespace GenericsDemo.WithGenerics
                 lines.Add(line.ToString().Substring(0, line.Length - 1));
             }
 
+            // Create directory if not exists
+            Directory.CreateDirectory(Path.GetDirectoryName(filePath));
             System.IO.File.WriteAllLines(filePath, lines);
         }
     }
