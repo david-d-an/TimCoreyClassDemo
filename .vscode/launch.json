@@ -49,6 +49,17 @@
             "stopAtEntry": false
         },
         {
+            "name": "Middleware",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildMiddleware",
+            "program": "${workspaceFolder}/Generics/bin/Debug/net6.0/Middleware.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Middleware",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
             "name": "Functional Program",
             "type": "coreclr",
             "request": "launch",
