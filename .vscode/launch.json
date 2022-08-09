@@ -5,13 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Async Console",
+            "name": "AsyncDemo",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "buildAsync",
-            "program": "${workspaceFolder}/Async/bin/Debug/net5.0/Async.dll",
+            "preLaunchTask": "buildAsyncDemo",
+            "program": "${workspaceFolder}/AsyncDemo/bin/Debug/net6.0/AsyncDemo.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Async",
+            "cwd": "${workspaceFolder}/AsyncDemo",
             "console": "internalConsole",
             "stopAtEntry": false
         },
