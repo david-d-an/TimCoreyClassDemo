@@ -25,6 +25,8 @@ namespace AsyncDemo {
 
 
         private static async Task<int> DownloadDocsMainPageAsync() {
+            int i = 0;
+            
             Console.WriteLine($"{nameof(DownloadDocsMainPageAsync)}: About to start downloading.");
 
             var client = new HttpClient();
