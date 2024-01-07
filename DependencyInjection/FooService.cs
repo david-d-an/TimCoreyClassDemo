@@ -1,19 +1,14 @@
 using Microsoft.Extensions.Logging;
 
-namespace DependencyInjectionDemo {
-    public interface IFooService {
-        void DoFooThing(int number);
-    }
+namespace DependencyInjection;
 
-    public class FooService : IFooService {
-        private readonly ILogger<FooService> _logger;
+public interface IFooService {
+    void DoFooThing(int number);
+}
 
-        public FooService(ILogger<FooService> logger) {
-            _logger = logger;
-        }
-
-        public void DoFooThing(int number) {
-            _logger.LogInformation($"Doing the thing {number}");
-        }
+public class FooService(ILogger<FooService> logger) : IFooService
+{
+    public void DoFooThing(int number) {
+        logger.LogInformation($"Foo is doing the thing {number}");
     }
 }
