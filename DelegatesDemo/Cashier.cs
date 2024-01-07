@@ -1,34 +1,34 @@
 using System;
 using DelegatesDemo.Model;
 
-namespace DelegatesDemo {
-    public class Cashier {
-        private readonly ShoppingCartModel _cart;
+namespace DelegatesDemo;
 
-        public Cashier() {
-            _cart = new ShoppingCartModel();
-            PopulateCartWithDemoData();
-        }
+public class Cashier {
+    private readonly ShoppingCartModel _cart;
 
-        public void RunTotal() {
-            var grandTotal = _cart.GenerateTotal(
-                AlertSubTotal,
-                (products, subTotal) => subTotal - (products.Count * 2),
-                msg => Console.WriteLine(msg)
-            );
+    public Cashier() {
+        _cart = new ShoppingCartModel();
+        PopulateCartWithDemoData();
+    }
 
-            Console.WriteLine($"Grand Total: {grandTotal:C2}");
-        }
+    public void RunTotal() {
+        var grandTotal = _cart.GenerateTotal(
+            AlertSubTotal,
+            (products, subTotal) => subTotal - (products.Count * 2),
+            Console.WriteLine
+        );
 
-        private static void AlertSubTotal(decimal subTotal) {
-            Console.WriteLine($"The subtotal is {subTotal:C2}");
-        }
+        Console.WriteLine($"Grand Total: {grandTotal:C2}");
+    }
 
-        private void PopulateCartWithDemoData() {
-            _cart.Items.Add(new ProductModel { ItemName = "Cereal", Price = 3.63M });
-            _cart.Items.Add(new ProductModel { ItemName = "Milk", Price = 2.95M });
-            _cart.Items.Add(new ProductModel { ItemName = "Strawberries", Price = 7.51M });
-            _cart.Items.Add(new ProductModel { ItemName = "Blueberries", Price = 8.84M });
-        }
+    private static void AlertSubTotal(decimal subTotal) {
+        Console.WriteLine($"The subtotal is {subTotal:C2}");
+    }
+
+    private void PopulateCartWithDemoData() {
+        _cart.Items.Add(new ProductModel { ItemName = "Cereal", Price = 3.63M });
+        _cart.Items.Add(new ProductModel { ItemName = "Milk", Price = 2.95M });
+        _cart.Items.Add(new ProductModel { ItemName = "Strawberries", Price = 7.51M });
+        _cart.Items.Add(new ProductModel { ItemName = "Blueberries", Price = 8.84M });
     }
 }
