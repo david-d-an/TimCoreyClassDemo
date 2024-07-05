@@ -1,7 +1,11 @@
 using TaskRun;
+using TaskRun.Workers;
 
 var builder = Host.CreateApplicationBuilder(args);
-builder.Services.AddHostedService<Worker>();
+builder.Services
+    .AddHostedService<Worker1>()
+    .AddHostedService<Worker2>()
+    .AddHostedService<Worker3>();
 
 var host = builder.Build();
 host.Run();
